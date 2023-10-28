@@ -1,0 +1,63 @@
+.form{
+    width: 600px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+.wrap-iput{
+   display: grid;
+    grid-template-areas:
+        "labAuthor .  author"
+        "labName .  name"
+        "labGenre .  genre"
+        "labCountPage .  countPages";
+    gap: 8px;
+    grid-template-columns: 150px 10px 300px;
+}
+.labAuthor{
+    grid-area: labAuthor;
+}
+#author{
+    grid-area:  author;
+}
+.labName{
+    grid-area:  labName;
+}
+#name{
+    grid-area:  name;
+}
+.labGenre{
+    grid-area:  labGenre;
+}
+#genre{
+    grid-area:  genre;
+}
+.labCountPage{
+    grid-area:  labCountPage;
+}
+#countPages{
+    grid-area:  countPages;
+}
+#butForm{
+
+}
+input[type="text"]{
+    background-color: lightgreen;
+    border: none;
+    height: 20px;
+    border-radius: 10px;
+}
+#butForm{
+margin-left: 120px;
+margin-top: 20px;
+width: 150px;
+height: 30px;
+background-color: rgb(0, 176, 0) ;
+color: white;
+font-size: 16px;
+border: none;
+border-radius:10px;
+}
+#msg{
+    width: 200px;
+    height: 100px;
+}

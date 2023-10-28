@@ -1,0 +1,31 @@
+    <!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Библиотека</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form">
+            <div class="wrap-iput">
+               <label class="labAuthor" for="author">Автор</label>
+               <input type="text" id="author" name="inputAuthor" class="checkNotNull"/>
+               <label class="labName" for="name">Наименование</label>
+               <input type="text" id="name" name="inputName" class="checkNotNull"/>
+               <label class="labGenre" for="genre">Жанр</label>
+               <input type="text" id="genre" name="inputGenre" class="checkNotNull"/>
+               <label class="labCountPage" for="countPages">Количество страниц</label>
+               <input type="text"  id="countPages" name="inputCountPages" class="checkNotNull"/>
+             </div>
+            <button type="button" id="butForm">Добавить</button>
+            <button type="button" id="butCancle" style="display:none">Отмена</button>
+            <div id="msg"></div>
+            <table id="booksTable">
+
+            </table>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
