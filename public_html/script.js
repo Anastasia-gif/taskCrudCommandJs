@@ -81,8 +81,8 @@ function addBook(book){
             <span id="rvCountPages${bookId}">${book.countPages}</span><br>
             </td>
             <td>
-                <input type="button" id="buttonDelete${bookId}"><br>
-                <input type="button" id="buttonEdit${bookId}">
+                <input type="button" id="buttonDelete${bookId}" value="&#10005" style="width:50px; height=20px"><br>
+                <input type="button" id="buttonEdit${bookId}" value="&#9998" style="width:50px; height=20px">
             </td>
 `;
     booksTable.appendChild(bookRow);
