@@ -22,14 +22,17 @@ function validateForm(){
         }
     }
 }
-function addBookToDB() {
-    validateForm();
-    addBook({
+function readForm(){
+    return {
         author:getElValue("author"),
         name:getElValue("name"),
         genre:getElValue("genre"),
         countPages:getElValue("countPages")
-    });
+    };
+}
+function addBookToDB() {
+    validateForm();
+   addBook(readForm());
 }
 let booksIdCounter=0;
 let booksTable=getEl("booksTable");
@@ -61,6 +64,7 @@ function saveBook(){
         setElHTML("rvName"+id,getElValue("name"));
         setElHTML("rvGenre"+id,getElValue("genre"));
         setElHTML("rvCountPages"+id,getElValue("countPages"));
+        localStorage.setItem("book"+id, JSON.stringify( currentEditBook));
         cancleEdit();
 }
 function clearForm(){
@@ -73,6 +77,8 @@ function addBook(book){
     let bookId=booksIdCounter++;
     book.id=bookId;
     let bookRow=document.createElement("tr");
+    localStorage.setItem("book"+bookId, JSON.stringify(book));
+    console.log(book);
     bookRow.innerHTML= `
             <td>
             <span id="rvAuthor${bookId}">${book.author}</span><br>
